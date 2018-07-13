@@ -68,7 +68,9 @@ class LockManager {
 				$exists = true;
 				$lock->setCreatedAt(\time());
 				$lock->setTimeout($timeout);
-				$lock->setOwner($owner);
+				if (empty($lock->getOwner())) {
+					$lock->setOwner($owner);
+				}
 				$this->lockMapper->update($lock);
 			}
 		}
