@@ -665,7 +665,6 @@ trait BasicStructure {
 	}
 
 	/**
-	 * @When /^user "([^"]*)" logs in to a web-style session using the API$/
 	 * @Given /^user "([^"]*)" has logged in to a web-style session using the API$/
 	 *
 	 * @param string $user
